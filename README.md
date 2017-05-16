@@ -1,4 +1,4 @@
-# README
+# Semantic UI + Rails 5.1
 
 Testing Semantic UI compoments with Rails 5.1, Yarn & AJAX
 
