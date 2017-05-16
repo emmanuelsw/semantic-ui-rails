@@ -10,4 +10,7 @@ rails db:seed
 rails s
 ```
 
+![Screenshot](https://raw.githubusercontent.com/emmanuelsw/semantic-ui-rails/master/screenshot.png)
+
+
 &copy; EmmanuelSW 2017
