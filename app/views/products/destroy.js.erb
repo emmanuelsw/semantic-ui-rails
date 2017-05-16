@@ -1,0 +1,6 @@
+$("#<%= @product.id %>").transition('fly left')
+
+// $('.message .close').on('click', function() {
+//   $(this).closest('.message').transition('fade');
+// });
+UnobtrusiveFlash.showFlashMessage("Product was successfully destroyed.", {type: 'notice', timeout: 3000})

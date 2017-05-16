@@ -1,0 +1,42 @@
+<div class="ui modal">
+  <div class="header">Create Product</div>
+  <div class="content">
+    <%= simple_form_for(@product, remote: true, local: true, html: { class: 'ui form' }) do |form| %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.input_field :name, id: :product_name %>
+        <%= form.full_error :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :body %>
+        <%= form.input_field :body, id: :product_body %>
+        <%= form.full_error :body %>
+      </div>
+
+      <div class="field">
+        <%= form.label :price %>
+        <%= form.input_field :price, id: :product_price %>
+        <%= form.full_error :price %>
+      </div>
+
+      <div class="field">
+        <%= form.label :date %>
+        <%= form.input_field :date, as: :string, id: :product_date %>
+        <%= form.full_error :dates %>
+      </div>
+
+      <div class="field">
+        <%= form.label :category %>
+        <%= form.input_field :category_id, collection: Category.all, prompt: "Choose a category" %>
+        <%= form.full_error :category %>
+      </div>
+
+      <div class="field">
+        <div class="ui cancel button">Cancel</div>
+        <%= form.button :submit, nil, class: "ui approve green button" %>
+      </div>
+    <% end %>
+  </div>
+</div>

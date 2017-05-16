@@ -1,0 +1,29 @@
+<h1>Categories</h1>
+
+<table class="ui selectable celled stripped table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Acitons</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= sanitize category.name %></td>
+        <td><%= sanitize category.body %></td>
+        <td>
+          <%= link_to 'Show', category, class: "ui button" %>
+          <%= link_to 'Edit', edit_category_path(category), class: "ui teal button" %>
+          <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_category_path, class: "ui green button" %>

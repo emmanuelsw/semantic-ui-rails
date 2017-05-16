@@ -1,0 +1,37 @@
+<h1>Products</h1>
+
+<table class="ui celled striped selectable table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr id="<%= product.id %>">
+        <td><%= sanitize product.name %></td>
+        <td><%= sanitize product.body %></td>
+        <td><%= number_to_currency product.price %></td>
+        <td><%= product.date %></td>
+        <td><%= product.category_name %></td>
+        <td>
+          <%= link_to 'Show', product, class: "ui button" %>
+          <%= link_to 'Edit', edit_product_path(product), class: "ui teal button" %>
+          <%= link_to 'Destroy', product, remote: :true, method: :delete, data: { confirm: 'Are you sure?' },
+          class: "ui red button" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path, class: "ui green button" %>
+<%= link_to 'New Product AJAX Modal', new_product_path, remote: true, class: "ui black button" %>

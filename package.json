@@ -1,0 +1,7 @@
+{
+  "name": "semantic_test",
+  "private": true,
+  "dependencies": {
+    "semantic-ui-css": "^2.2.10"
+  }
+}

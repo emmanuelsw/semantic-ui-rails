@@ -1,0 +1,46 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require semantic-ui-css/semantic.min
+*= require unobtrusive_flash_ui
+*= require_self
+*/
+
+abbr[title] {
+  text-decoration: none;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: none;
+}
+
+#unobtrusive-flash-messages .unobtrusive-flash-message-wrapper .unobtrusive-flash-message {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#unobtrusive-flash-messages .unobtrusive-flash-message-wrapper {
+  padding: 10px 0;
+  background: #2ecc71;
+  opacity: 1;
+}
+
+h1 {
+  padding-top: 40px;
+}

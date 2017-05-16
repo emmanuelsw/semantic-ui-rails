@@ -1,0 +1,15 @@
+<%= simple_form_for(@category, html: {class: "ui form"}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <%= f.input_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.input_field :body %>
+  </div>
+
+  <div class="field">
+    <%= f.button :submit, class: "ui green button" %>
+  </div>
+<% end %>
