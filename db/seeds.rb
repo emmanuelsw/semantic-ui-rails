@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-Product.delete_all
-
+1.upto(10) do |i|
+  Category.create(name: "Category ##{i}", body: "Description of category ##{i}")
+end
 
 1.upto(10) do |i|
   Product.create(name: "Product ##{i}", body: "Description of product ##{i}", price: Random.new.rand(1000..50000), date: Time.now, category_id: Random.new.rand(1..10))
