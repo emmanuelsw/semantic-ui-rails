@@ -7,6 +7,7 @@ git clone https://github.com/emmanuelsw/semantic-ui-rails.git
 cd semantic-ui-rails
 rails db:migrate
 rails db:seed
+yarn install
 rails s
 ```
 
