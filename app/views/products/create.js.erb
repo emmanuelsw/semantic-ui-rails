@@ -1,0 +1,7 @@
+$('.ui.modal').modal({
+  transition: 'fly down'
+}).modal('hide');
+
+$("#products_container").append('<%= j render @product %>');
+
+UnobtrusiveFlash.showFlashMessage("Producto creado correctamente.", {type: 'notice', timeout: 3000})

@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :categories
   root "products#index"
-  resources :products
+
+  resources :categories
+
+  resources :products  do
+    collection do
+      get 'test'
+    end
+  end
+
 end

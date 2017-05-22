@@ -30,6 +30,7 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to products_url, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -58,6 +59,12 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
       format.js
     end
+  end
+
+  def test
+    @products = Product.pluck(:price)
+
+    render json: @products
   end
 
   private
